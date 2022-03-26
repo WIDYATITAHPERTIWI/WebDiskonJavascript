@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mencari Diskon</title>
+	</head>
+	<body>
+		<h2>Mencari Nilai Diskon</h2>
+
+		<table>
+			<tr>
+				<td>Masukkan Harga Barang</td>
+				<td><input type="text" id="nilai"></td>
+			</tr>
+			<tr>
+				<td>Masukkan Diskon</td>
+				<td><input type="text" id="diskon" onkeyup="cari()"></td>
+			</tr>
+			<tr>
+				<td>Hasil</td>
+				<td><input type="text" id="hasil"></td>
+			</tr>
+		</table>
+		<script language="JavaScript" type="text/javascript">
+			var cari = function() {
+				var nilai = document.getElementById('nilai').value;
+				var diskon = document.getElementById('diskon').value;
+				
+				var hasil = nilai - (diskon * nilai) / 100;
+
+				document.getElementById('hasil').value = hasil;
+			}
+			
+		</script>
+
+	</body>
+</html>
